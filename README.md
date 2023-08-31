@@ -11,7 +11,7 @@ So, in order to make it, I've grabbed the latest release (v.0.5.0a0) from the Gi
 # installation
 It is pretty easy: just extract the tar.gz archive, but make a folder first to unpack.
 
-Assuming that you're in the home folder, for extraction you can use: `tar -xf aubio-python-aarch64.tar.gz ./extractfoldername`.
+Assuming that you're in the home folder, make a new directory using `mkdir yourfoldername`, then for extraction you can use: `tar -xf aubio-python-aarch64.tar.gz -C ./yourfoldername`.
 
 The extracted folder matches the layout of the Termux prefix for ease of use.
 
@@ -20,7 +20,8 @@ back from the `com.termux/files` folder (which has `/home` and `/usr` in it).
 
 After copying the files to their own directories, you can try launching aubio by simply typing `./aubio`, which would launch the program.
 # troubleshooting
-If you see a message saying `ModuleNotFoundError: No module named aubio`, investigate if `aubio` and `aubiocut` has "executable" permissions, 
+* If you see a message from `tar` saying that `... not found in archive`, use either the `-C ./foldername` or `--directory /path/to/folder` option to extract to a folder.
+* If you see a message saying `ModuleNotFoundError: No module named aubio`, investigate if `aubio` and `aubiocut` has "executable" permissions, 
 you can test it by going to `/usr/bin` then invoking `./aubio`. If `bash: aubio : Permission denied` is the message you get, use `chmod +x ./aubio` and that should fix the issue.
 
 If you're still experiencing the same message, go to `/usr/lib/python3.11/site-packages/aubio` and repeat `chmod +x` on all the `.py` files and the `.so` file in the directory.
