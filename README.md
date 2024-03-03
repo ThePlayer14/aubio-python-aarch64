@@ -5,9 +5,7 @@ This program was entirely built within Termux on my ARMv8 (aarch64/arm64) phone.
 
 After many attempts of trying to install from pip didn't bear fruit, I've tried using proot-distro environments (which worked with pip), 
 but my goal was to have it working in a vanilla Termux environment.
-
-So, in order to make it, I've grabbed the latest release (v.0.5.0a0) from the Git repo, and worked with that one instead of the one from pypi's v.0.4.9 one.
-
+This build is based on release (v.0.5.0a0) from the Git repo, instead of the one from pypi's v.0.4.9 one.
 # installation
 It is pretty easy: just extract the tar.gz archive, but make a folder first to unpack.
 
